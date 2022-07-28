@@ -53,10 +53,11 @@ li:nth-child(even) {
   background-color: rgb(148, 145, 145);
 }
 
-.add-score {
+#form {
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  margin-top: 10px;
+  gap: 8px;
   width: 300px;
 }
 
