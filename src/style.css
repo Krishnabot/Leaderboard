@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  padding: 3rem;
+}
+
+h1 {
+  text-align: left;
+  padding: 3rem;
+
+}
+
+p {
+  font-size: 30px;
+}
+
+.score-wrap {
+  display: flex;
+  gap: 5rem;
+  justify-content: space-around;
+}
+
+.scores {
+  display: flex;
+  flex-direction: column;
+}
+
+.score-heading {
+  display: flex;
+  flex-direction: row;
+  gap:5em;
+}
+
+#refresh{
+  width: 90px;
+    border-radius: 5px;
+
+}
+.add-score{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 300px;
+}
+
+input{
+  padding:5px;
+  border-radius: 5px;
+}
+#submit{
+  width: 33%;
+  margin-left: auto;
+}
