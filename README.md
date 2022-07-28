@@ -3,13 +3,20 @@
 # LeaderBoard App 
 
 - Leaderboard, an npm project is created with Webpack.
-- Plain HTML minimum styling is added to match the design of the      following [wireframe](https://user-images.githubusercontent.com/40334904/181496149-c33ce12f-14df-42f2-996c-f8d320bc95a5.png). and scores are added dynamically from javascript.
+- Plain HTML minimum styling is added to match the design of the      following [wireframe](https://user-images.githubusercontent.com/40334904/181496149-c33ce12f-14df-42f2-996c-f8d320bc95a5.png).
+- A new game is created of name "Dodex" by using the LeaderBoard API.
+- A Refresh button is implemented which receives data from the API and parse the JSON.
+- A submit  button added which sends data to the API.
+- Arrow functions are used instead of the function keyword.
+- async and await are used to consume the API.
+
 ## Built With
 
 - Html
 - Css
 - Java script
 - Webpack
+- PostMan
 
 ## Live Demo 
 
