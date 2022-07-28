@@ -3,14 +3,14 @@
   padding: 0;
   box-sizing: border-box;
 }
-body{
+
+body {
   padding: 3rem;
 }
 
 h1 {
   text-align: left;
   padding: 3rem;
-
 }
 
 p {
@@ -23,7 +23,7 @@ p {
   justify-content: space-around;
 }
 
-.scores {
+.scores-card {
   display: flex;
   flex-direction: column;
 }
@@ -31,26 +31,41 @@ p {
 .score-heading {
   display: flex;
   flex-direction: row;
-  gap:5em;
+  gap: 5em;
 }
 
-#refresh{
+#refresh {
   width: 90px;
-    border-radius: 5px;
-
+  border-radius: 5px;
 }
-.add-score{
+
+ul {
+  list-style: none;
+  border: 1px solid black;
+  margin-top: 1rem;
+}
+
+li {
+  padding: 1rem;
+}
+
+li:nth-child(even) {
+  background-color: rgb(148, 145, 145);
+}
+
+.add-score {
   display: flex;
   flex-direction: column;
   gap: 1em;
   width: 300px;
 }
 
-input{
-  padding:5px;
+input {
+  padding: 5px;
   border-radius: 5px;
 }
-#submit{
+
+#submit {
   width: 33%;
   margin-left: auto;
 }
