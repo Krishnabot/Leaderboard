@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Pack Setup </title>
+    <title>leaderboard </title>
 <script defer src="runtime.js"></script><script defer src="main.js"></script></head>
 <body>
 <h1>Leader Board</h1>
@@ -17,9 +17,11 @@
 </section>
 <section class="add-score">
      <p>Add your score</p>
+     <form action="/" method="post" id="form" >
       <input type="text" name="name" id="name" required placeholder="Your name">
       <input type="number" name="score" id="score" required placeholder="Your score">
-      <input type="submit" id= "submit" value="Submit"></section>
+      <input type="submit" id= "submit" value="Submit">
+    </form></section>
 </div>
 </body>
 </html>

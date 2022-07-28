@@ -9,6 +9,36 @@
  */
 (self["webpackChunkto_do_list"] = self["webpackChunkto_do_list"] || []).push([["main"],{
 
+/***/ "./modules/AddScore.js":
+/*!*****************************!*\
+  !*** ./modules/AddScore.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _src_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../src/index.js */ \"./src/index.js\");\n\n\nconst AddScore = () => {\n  fetch(_src_index_js__WEBPACK_IMPORTED_MODULE_0__.URL, {\n    method: \"POST\",\n    headers: { \"Content-type\": \"application/json; charset=UTF-8\" },\n    body: JSON.stringify({\n      user: _src_index_js__WEBPACK_IMPORTED_MODULE_0__.name.value,\n      score: _src_index_js__WEBPACK_IMPORTED_MODULE_0__.score.value,\n    }),\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AddScore);\n\n\n//# sourceURL=webpack://to-do-list/./modules/AddScore.js?");
+
+/***/ }),
+
+/***/ "./modules/dynamichtml.js":
+/*!********************************!*\
+  !*** ./modules/dynamichtml.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst DynamicHtml = (text) => {\n  text.forEach((element, index) => {\n    const li = document.createElement(\"li\");\n    const LeaderBoard = document.querySelector(\"#leaderboard\");\n    li.classList.add(\"scores\");\n    li.textContent = `${index + 1}. ${element.user}:${element.score}`;\n    LeaderBoard.appendChild(li);\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DynamicHtml);\n\n\n//# sourceURL=webpack://to-do-list/./modules/dynamichtml.js?");
+
+/***/ }),
+
+/***/ "./modules/getScore.js":
+/*!*****************************!*\
+  !*** ./modules/getScore.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _dynamichtml_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dynamichtml.js */ \"./modules/dynamichtml.js\");\n\n\nconst getScore = () => {\n  fetch(URL)\n    .then(async (response) => {\n      const data = await response.json();\n      const DataArray = data.result;\n      return DataArray;\n    })\n    .then((DataArray) => {\n      (0,_dynamichtml_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(DataArray);\n    });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getScore);\n\n\n//# sourceURL=webpack://to-do-list/./modules/getScore.js?");
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./src/style.css":
 /*!*************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./src/style.css ***!
@@ -109,23 +139,13 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
-/***/ "./src/dynamichtml.js":
-/*!****************************!*\
-  !*** ./src/dynamichtml.js ***!
-  \****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst DynamicHtml = (text) => {\n  const leaderboard = document.getElementById('leaderboard');\n  const li = document.createElement('li');\n\n  li.classList.add('scores');\n  li.innerHTML = text;\n\n  leaderboard.appendChild(li);\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DynamicHtml);\n\n\n//# sourceURL=webpack://to-do-list/./src/dynamichtml.js?");
-
-/***/ }),
-
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _dynamichtml_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./dynamichtml.js */ \"./src/dynamichtml.js\");\n\n\n\nconst dynamicContent = {\n  result: [\n    {\n      user: 'One',\n      score: 100,\n    },\n    {\n      user: 'Two',\n      score: 125,\n    },\n    {\n      user: 'Three',\n      score: 140,\n    },\n    {\n      user: 'Four',\n      score: 178,\n    },\n    {\n      user: 'Five',\n      score: 300,\n    },\n  ],\n};\n\n// print the data into the html\ndynamicContent.result.forEach((element) => {\n  const text = `${element.user}: ${element.score}`;\n  (0,_dynamichtml_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(text);\n});\n\n\n//# sourceURL=webpack://to-do-list/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"LeaderBoard\": () => (/* binding */ LeaderBoard),\n/* harmony export */   \"URL\": () => (/* binding */ URL),\n/* harmony export */   \"name\": () => (/* binding */ name),\n/* harmony export */   \"score\": () => (/* binding */ score)\n/* harmony export */ });\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_AddScore_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../modules/AddScore.js */ \"./modules/AddScore.js\");\n/* harmony import */ var _modules_getScore_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../modules/getScore.js */ \"./modules/getScore.js\");\n\n\n\n\nconst form = document.querySelector(\".form\");\nconst name = document.querySelector(\"#name\");\nconst score = document.querySelector(\"#score\");\nconst LeaderBoard = document.querySelector(\"#leaderboard\");\nconst RefreshBtn = document.querySelector(\"#refresh\");\nconst URL =\n  \"https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/fLLGhFOYzdFIIisID8YZ/scores/\";\n\n(0,_modules_getScore_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n\nRefreshBtn.addEventListener(\"click\", () => {\n  LeaderBoard.innerHTML = \"\";\n  (0,_modules_getScore_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n});\n\nform.addEventListener(\"submit\", (e) => {\n  e.preventDefault();\n  (0,_modules_AddScore_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n  form.reset();\n});\n\n\n\n\n//# sourceURL=webpack://to-do-list/./src/index.js?");
 
 /***/ })
 
