@@ -1,33 +1,27 @@
 import './style.css';
-import DynamicHtml from './dynamichtml.js';
+import AddScore from '../modules/AddScore.js';
+import getScore from '../modules/getScore.js';
 
-const dynamicContent = {
-  result: [
-    {
-      user: 'One',
-      score: 100,
-    },
-    {
-      user: 'Two',
-      score: 125,
-    },
-    {
-      user: 'Three',
-      score: 140,
-    },
-    {
-      user: 'Four',
-      score: 178,
-    },
-    {
-      user: 'Five',
-      score: 300,
-    },
-  ],
-};
+const form = document.querySelector('#form');
+const name = document.querySelector('#name');
+const score = document.querySelector('#score');
+const LeaderBoard = document.querySelector('#leaderboard');
+const RefreshBtn = document.querySelector('#refresh');
+const URL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/fLLGhFOYzdFIIisID8YZ/scores/';
 
-// print the data into the html
-dynamicContent.result.forEach((element) => {
-  const text = `${element.user}: ${element.score}`;
-  DynamicHtml(text);
+getScore();
+
+RefreshBtn.addEventListener('click', () => {
+  LeaderBoard.innerHTML = '';
+  getScore();
 });
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  AddScore();
+  form.reset();
+});
+
+export {
+  LeaderBoard, URL, name, score,
+};
