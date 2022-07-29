@@ -1,11 +1,11 @@
-const canvas = document.querySelector(".matrix");
+const canvas = document.querySelector('.matrix');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
-const ctx = canvas.getContext("2d");
+const ctx = canvas.getContext('2d');
 let cols = Math.floor(window.innerWidth / 20) + 1;
 let ypos = Array(cols).fill(0);
 
-ctx.fillStyle = "#000";
+ctx.fillStyle = '#000';
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 function matrix() {
@@ -21,11 +21,11 @@ function matrix() {
     canvas.height = h;
   }
 
-  ctx.fillStyle = "#0001";
+  ctx.fillStyle = '#0001';
   ctx.fillRect(0, 0, w, h);
 
-  ctx.fillStyle = "#0f0";
-  ctx.font = "15pt monospace";
+  ctx.fillStyle = '#0f0';
+  ctx.font = '15pt monospace';
 
   ypos.forEach((y, ind) => {
     const text = String.fromCharCode(Math.random() * 128);

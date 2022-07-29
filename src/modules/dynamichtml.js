@@ -1,7 +1,7 @@
 const DynamicHtml = (text) => {
-  text.forEach((element, index) => {
+  text.forEach((element) => {
     const LeaderBoard = document.querySelector('#leaderboard');
-    const li = document.createElement("tr");
+    const li = document.createElement('tr');
     li.classList.add('scores');
     li.innerHTML = `
     <td>${element.user}</td>
