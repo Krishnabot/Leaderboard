@@ -4,6 +4,7 @@
 @font-face { font-family: KongFont; src: url('./fonts/kongtext.ttf'); }
 @font-face { font-family: GalacticGrid; src: url('./fonts/galacticagrid.regular.ttf'); }
 @font-face { font-family: UglyByte; src: url('./fonts/Ugly\ Byte\ Free\ Trial.ttf'); }
+@font-face { font-family: GameMusicLove; src: url('./fonts/game-music-love.regular.ttf'); }
 
 * {
   margin: 0;
@@ -154,8 +155,19 @@ background: linear-gradient(90deg, rgba(252,176,69,1) 0%, rgba(253,29,29,1) 36%,
 #name, #score{
   padding:20px;
 }
+::placeholder{
+  font-family: GameMusicLove, sans-serif;
+  line-height: 20;
+ font-size: 2rem;
+ color: #000000;
+ opacity: 50%;
+ text-align: center;
+}
+
 input {
   padding: 5px;
+  background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 }
 
 .btn {
