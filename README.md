@@ -4,11 +4,12 @@
 
 - Leaderboard, an npm project is created with Webpack.
 - Plain HTML minimum styling is added to match the design of the      following [wireframe](https://user-images.githubusercontent.com/40334904/181496149-c33ce12f-14df-42f2-996c-f8d320bc95a5.png).
-- A new game is created of name "Dodex" by using the LeaderBoard API.
+- A new game is created of name "Codex" by using the LeaderBoard API.
 - A Refresh button is implemented which receives data from the API and parse the JSON.
 - A submit  button added which sends data to the API.
 - Arrow functions are used instead of the function keyword.
 - async and await are used to consume the API.
+- UI Of the website is  optimised using plain CSS.
 
 ## Built With
 
@@ -50,9 +51,11 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Read Write Extercise [Youtube](https://youtu.be/3LZOL65sxhU)
-- Hitesh Choudhary [Youtube](https://youtu.be/dQCdwX0p_tc)
-- Dler Ari [FreecodeCamp](https://www.freecodecamp.org/news/how-to-use-es6-modules-and-why-theyre-important-a9b20b480773/)
+-Used custom fonts from  [1001 Fonts](https://www.1001fonts.com/retro+video-game-fonts.html?page=1)
+- Generated Css gradient from [www.cssgradient.io](https://cssgradient.io/)
+-
+- Logo gif Used from [www.tenor.com/](https://tenor.com/)
+- BackGround Inspired from [The Matrix Triology](https://en.wikipedia.org/wiki/The_Matrix_(franchise))
 
 ## 📝 License
 
