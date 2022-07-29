@@ -9,43 +9,13 @@
  */
 (self["webpackChunkto_do_list"] = self["webpackChunkto_do_list"] || []).push([["main"],{
 
-/***/ "./modules/AddScore.js":
-/*!*****************************!*\
-  !*** ./modules/AddScore.js ***!
-  \*****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst name = document.querySelector('#name');\nconst score = document.querySelector('#score');\nconst URL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/fLLGhFOYzdFIIisID8YZ/scores/';\n\nconst AddScore = () => {\n  fetch(URL, {\n    method: 'POST',\n    headers: { 'Content-type': 'application/json; charset=UTF-8' },\n    body: JSON.stringify({\n      user: name.value,\n      score: score.value,\n    }),\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AddScore);\n\n\n//# sourceURL=webpack://to-do-list/./modules/AddScore.js?");
-
-/***/ }),
-
-/***/ "./modules/dynamichtml.js":
-/*!********************************!*\
-  !*** ./modules/dynamichtml.js ***!
-  \********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst DynamicHtml = (text) => {\n  text.forEach((element, index) => {\n    const LeaderBoard = document.querySelector('#leaderboard');\n    const li = document.createElement('li');\n    li.classList.add('scores');\n    li.textContent = `${index + 1}. ${element.user}:${element.score}`;\n    LeaderBoard.appendChild(li);\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DynamicHtml);\n\n\n//# sourceURL=webpack://to-do-list/./modules/dynamichtml.js?");
-
-/***/ }),
-
-/***/ "./modules/getScore.js":
-/*!*****************************!*\
-  !*** ./modules/getScore.js ***!
-  \*****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _dynamichtml_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dynamichtml.js */ \"./modules/dynamichtml.js\");\n\n\nconst URL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/fLLGhFOYzdFIIisID8YZ/scores/';\n\nconst getScore = () => {\n  fetch(URL)\n    .then(async (response) => {\n      const data = await response.json();\n      const DataArray = data.result;\n      return DataArray;\n    })\n    .then((DataArray) => {\n      (0,_dynamichtml_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(DataArray);\n    });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getScore);\n\n\n//# sourceURL=webpack://to-do-list/./modules/getScore.js?");
-
-/***/ }),
-
 /***/ "./node_modules/css-loader/dist/cjs.js!./src/style.css":
 /*!*************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./src/style.css ***!
   \*************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"* {\\n  margin: 0;\\n  padding: 0;\\n  box-sizing: border-box;\\n}\\n\\nbody {\\n  padding: 3rem;\\n}\\n\\nh1 {\\n  text-align: left;\\n  padding: 3rem;\\n}\\n\\np {\\n  font-size: 30px;\\n}\\n\\n.score-wrap {\\n  display: flex;\\n  gap: 5rem;\\n  justify-content: space-around;\\n}\\n\\n.scores-card {\\n  display: flex;\\n  flex-direction: column;\\n}\\n\\n.score-heading {\\n  display: flex;\\n  flex-direction: row;\\n  gap: 5em;\\n}\\n\\n#refresh {\\n  width: 90px;\\n  border-radius: 5px;\\n}\\n\\nul {\\n  list-style: none;\\n  border: 1px solid black;\\n  margin-top: 1rem;\\n}\\n\\nli {\\n  padding: 1rem;\\n}\\n\\nli:nth-child(even) {\\n  background-color: rgb(148, 145, 145);\\n}\\n\\n.add-score {\\n  display: flex;\\n  flex-direction: column;\\n  gap: 1em;\\n  width: 300px;\\n}\\n\\ninput {\\n  padding: 5px;\\n  border-radius: 5px;\\n}\\n\\n#submit {\\n  width: 33%;\\n  margin-left: auto;\\n}\\n\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://to-do-list/./src/style.css?./node_modules/css-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/getUrl.js */ \"./node_modules/css-loader/dist/runtime/getUrl.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);\n// Imports\n\n\n\nvar ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ./fonts/PAC-FONT.TTF */ \"./src/fonts/PAC-FONT.TTF\"), __webpack_require__.b);\nvar ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ./fonts/zerovelo.ttf */ \"./src/fonts/zerovelo.ttf\"), __webpack_require__.b);\nvar ___CSS_LOADER_URL_IMPORT_2___ = new URL(/* asset import */ __webpack_require__(/*! ./fonts/kongtext.ttf */ \"./src/fonts/kongtext.ttf\"), __webpack_require__.b);\nvar ___CSS_LOADER_URL_IMPORT_3___ = new URL(/* asset import */ __webpack_require__(/*! ./fonts/galacticagrid.regular.ttf */ \"./src/fonts/galacticagrid.regular.ttf\"), __webpack_require__.b);\nvar ___CSS_LOADER_URL_IMPORT_4___ = new URL(/* asset import */ __webpack_require__(/*! ./fonts/Ugly Byte Free Trial.ttf */ \"./src/fonts/Ugly Byte Free Trial.ttf\"), __webpack_require__.b);\nvar ___CSS_LOADER_URL_IMPORT_5___ = new URL(/* asset import */ __webpack_require__(/*! ./fonts/game-music-love.regular.ttf */ \"./src/fonts/game-music-love.regular.ttf\"), __webpack_require__.b);\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\nvar ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);\nvar ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);\nvar ___CSS_LOADER_URL_REPLACEMENT_2___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_2___);\nvar ___CSS_LOADER_URL_REPLACEMENT_3___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_3___);\nvar ___CSS_LOADER_URL_REPLACEMENT_4___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_4___);\nvar ___CSS_LOADER_URL_REPLACEMENT_5___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_5___);\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"@font-face { font-family: PacFont; src: url(\" + ___CSS_LOADER_URL_REPLACEMENT_0___ + \"); }\\n\\n@font-face { font-family: ZeroVelFont; src: url(\" + ___CSS_LOADER_URL_REPLACEMENT_1___ + \"); }\\n\\n@font-face { font-family: KongFont; src: url(\" + ___CSS_LOADER_URL_REPLACEMENT_2___ + \"); }\\n\\n@font-face { font-family: GalacticGrid; src: url(\" + ___CSS_LOADER_URL_REPLACEMENT_3___ + \"); }\\n\\n@font-face { font-family: UglyByte; src: url(\" + ___CSS_LOADER_URL_REPLACEMENT_4___ + \"); }\\n\\n@font-face { font-family: GameMusicLove; src: url(\" + ___CSS_LOADER_URL_REPLACEMENT_5___ + \"); }\\n\\n* {\\n  margin: 0;\\n  padding: 0;\\n  box-sizing: border-box;\\n}\\n\\nbody {\\n  padding: 3rem;\\n  margin: 0;\\n  background-color: #000;\\n}\\n\\n.matrix {\\n  position: fixed;\\n  top: 0;\\n  left: 0;\\n}\\n\\nh1 {\\n  text-align: left;\\n  font-family: KongFont, sans-serif;\\n  font-size: 4rem;\\n  padding: 1rem;\\n  color: rgb(0, 236, 35);\\n  position: relative;\\n  z-index: 100;\\n}\\n\\np {\\n  font-size: 30px;\\n  font-family: PacFont, sans-serif;\\n}\\n\\n.score-wrap {\\n  display: flex;\\n  gap: 5rem;\\n  justify-content: space-around;\\n  padding: 1rem;\\n  position: relative;\\n  z-index: 100;\\n}\\n\\n.scores-card {\\n  display: flex;\\n  flex-direction: column;\\n}\\n\\n.score-heading {\\n  display: flex;\\n  flex-direction: row;\\n  gap: 5em;\\n}\\n\\n#refresh {\\n  padding: 1px;\\n  width: 200px;\\n  height: 30px;\\n  margin-bottom: 5px;\\n}\\n\\ntable {\\n  text-align: left;\\n  overflow: hidden;\\n  width: 100%;\\n  margin: 10px auto;\\n  display: table;\\n  padding: 0 0 8em 0;\\n}\\n\\nth {\\n  font-weight: bold;\\n  font-family: galacticGrid, sans-serif;\\n  font-size: 2em;\\n  text-align: left;\\n  color: #185875;\\n  background-color: #1f2739;\\n}\\n\\ntd {\\n  font-weight: normal;\\n  font-family: UglyByte, sans-serif;\\n  color: #a7a1ae;\\n  font-size: 25px;\\n  -webkit-box-shadow: 0 2px 2px -2px #0e1119;\\n  -moz-box-shadow: 0 2px 2px -2px #0e1119;\\n  box-shadow: 0 2px 2px -2px #0e1119;\\n}\\n\\ntd,\\nth {\\n  padding-bottom: 2%;\\n  padding-top: 2%;\\n  padding-left: 2%;\\n}\\n\\ntr:nth-child(odd) {\\n  background-color: #323c50;\\n}\\n\\ntr:nth-child(even) {\\n  background-color: #2c3446;\\n}\\n\\ntr:hover {\\n  background-color: #464a52;\\n  -webkit-box-shadow: 0 6px 6px -6px #0e1119;\\n  -moz-box-shadow: 0 6px 6px -6px #0e1119;\\n  box-shadow: 0 6px 6px -6px #0e1119;\\n}\\n\\ntd:hover {\\n  background-color: #5c85ff;\\n  color: #fff;\\n  font-weight: bold;\\n  box-shadow: #938f1d -1px 1px, #7f7c21 -2px 2px, #7f7c21 -3px 3px, #7f7c21 -4px 4px, #7f7c21 -5px 5px, #7f7c21 -6px 6px;\\n  transform: translate3d(6px, -6px, 0);\\n  transition-delay: 0s;\\n  transition-duration: 0.4s;\\n  transition-property: all;\\n  transition-timing-function: line;\\n}\\n\\n.pgradient {\\n  background: rgb(252, 176, 69);\\n  background: linear-gradient(90deg, rgba(252, 176, 69, 1) 0%, rgba(253, 29, 29, 1) 36%, rgba(131, 58, 180, 1) 95%);\\n  padding: 20px;\\n}\\n\\n#form {\\n  display: flex;\\n  flex-direction: column;\\n  margin: 20px auto;\\n  gap: 20px;\\n}\\n\\n#name,\\n#score {\\n  padding: 20px;\\n}\\n\\n::placeholder {\\n  font-family: GameMusicLove, sans-serif;\\n  line-height: 20;\\n  font-size: 2rem;\\n  color: #000;\\n  opacity: 50%;\\n  text-align: center;\\n}\\n\\ninput {\\n  padding: 5px;\\n  background: rgb(238, 174, 202);\\n  background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);\\n}\\n\\n.btn {\\n  margin: 10px 0 auto auto;\\n  width: 50%;\\n  position: relative;\\n  font-size: 1rem;\\n  font-family: ZeroVelFont, sans-serif;\\n  letter-spacing: 2px;\\n  text-transform: uppercase;\\n  color: #fff;\\n  text-shadow: 0 5px 20px rgba(192, 36, 0, 0.4), 0 2px 2px rgba(192, 36, 0, 0.4);\\n  background-image:\\n    radial-gradient(\\n      100% 75% at 50% 100%,\\n      #fed262 0%,\\n      #c40900 100%\\n    );\\n  border: none;\\n  border-radius: 100px;\\n  box-shadow: 1px 2px 38px 4px rgba(176, 26, 26, 0.75);\\n  -webkit-box-shadow: 1px 2px 38px 4px rgba(176, 26, 26, 0.75);\\n  -moz-box-shadow: 1px 2px 38px 4px rgba(176, 26, 26, 0.75);\\n\\n  &::before {\\n    content: \\\"\\\";\\n    position: absolute;\\n    z-index: -2;\\n    top: -2rem;\\n    left: -4rem;\\n    right: -4rem;\\n    bottom: -2rem;\\n    background: linear-gradient(#333, #151515);\\n    border-radius: 100px;\\n    box-shadow:\\n      0 2px 10px #000,\\n      inset 0 2px 0 #444;\\n  }\\n\\n  &::after {\\n    content: \\\"\\\";\\n    position: absolute;\\n    z-index: -1;\\n    background: #000;\\n    box-shadow: 0 1px 0 #444;\\n    height: 10px;\\n    left: -4rem;\\n    right: -4rem;\\n    top: 50%;\\n    transform: translateY(-50%);\\n  }\\n\\n  &:hover {\\n    cursor: pointer;\\n    background-image:\\n      radial-gradient(\\n        100% 75% at 50% 100%,\\n        #f7b940 0%,\\n        #a20700 100%\\n      );\\n  }\\n\\n  &:focus,\\n  &:active {\\n    outline: none;\\n    color: #f9e3bf;\\n    background-image:\\n      radial-gradient(\\n        100% 75% at 50% 100%,\\n        #f58725 0%,\\n        #850600 100%\\n      );\\n    box-shadow:\\n      inset 0 0 50px rgba(0, 0, 0, 0.4),\\n      inset 0 0 10px rgba(133, 6, 0, 1),\\n      inset 0 3px 15px 0 rgba(174, 32, 0, 1),\\n      inset 0 40px 0 0 rgba(254, 210, 98, 0.3),\\n      inset 0 20px 20px 0 rgba(248, 191, 69, 0.75),\\n      0 0 0 8px #000,\\n      0 9px 0 0 #444;\\n  }\\n}\\n\\n.logo-gif > img {\\n  opacity: 60%;\\n  border-radius: 50%;\\n}\\n\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://to-do-list/./src/style.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -56,6 +26,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((module) => {
 
 eval("\n\n/*\n  MIT License http://www.opensource.org/licenses/mit-license.php\n  Author Tobias Koppers @sokra\n*/\nmodule.exports = function (cssWithMappingToString) {\n  var list = []; // return the list of modules as css string\n\n  list.toString = function toString() {\n    return this.map(function (item) {\n      var content = \"\";\n      var needLayer = typeof item[5] !== \"undefined\";\n\n      if (item[4]) {\n        content += \"@supports (\".concat(item[4], \") {\");\n      }\n\n      if (item[2]) {\n        content += \"@media \".concat(item[2], \" {\");\n      }\n\n      if (needLayer) {\n        content += \"@layer\".concat(item[5].length > 0 ? \" \".concat(item[5]) : \"\", \" {\");\n      }\n\n      content += cssWithMappingToString(item);\n\n      if (needLayer) {\n        content += \"}\";\n      }\n\n      if (item[2]) {\n        content += \"}\";\n      }\n\n      if (item[4]) {\n        content += \"}\";\n      }\n\n      return content;\n    }).join(\"\");\n  }; // import a list of modules into the list\n\n\n  list.i = function i(modules, media, dedupe, supports, layer) {\n    if (typeof modules === \"string\") {\n      modules = [[null, modules, undefined]];\n    }\n\n    var alreadyImportedModules = {};\n\n    if (dedupe) {\n      for (var k = 0; k < this.length; k++) {\n        var id = this[k][0];\n\n        if (id != null) {\n          alreadyImportedModules[id] = true;\n        }\n      }\n    }\n\n    for (var _k = 0; _k < modules.length; _k++) {\n      var item = [].concat(modules[_k]);\n\n      if (dedupe && alreadyImportedModules[item[0]]) {\n        continue;\n      }\n\n      if (typeof layer !== \"undefined\") {\n        if (typeof item[5] === \"undefined\") {\n          item[5] = layer;\n        } else {\n          item[1] = \"@layer\".concat(item[5].length > 0 ? \" \".concat(item[5]) : \"\", \" {\").concat(item[1], \"}\");\n          item[5] = layer;\n        }\n      }\n\n      if (media) {\n        if (!item[2]) {\n          item[2] = media;\n        } else {\n          item[1] = \"@media \".concat(item[2], \" {\").concat(item[1], \"}\");\n          item[2] = media;\n        }\n      }\n\n      if (supports) {\n        if (!item[4]) {\n          item[4] = \"\".concat(supports);\n        } else {\n          item[1] = \"@supports (\".concat(item[4], \") {\").concat(item[1], \"}\");\n          item[4] = supports;\n        }\n      }\n\n      list.push(item);\n    }\n  };\n\n  return list;\n};\n\n//# sourceURL=webpack://to-do-list/./node_modules/css-loader/dist/runtime/api.js?");
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/getUrl.js":
+/*!********************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/getUrl.js ***!
+  \********************************************************/
+/***/ ((module) => {
+
+eval("\n\nmodule.exports = function (url, options) {\n  if (!options) {\n    options = {};\n  }\n\n  if (!url) {\n    return url;\n  }\n\n  url = String(url.__esModule ? url.default : url); // If url is already wrapped in quotes, remove them\n\n  if (/^['\"].*['\"]$/.test(url)) {\n    url = url.slice(1, -1);\n  }\n\n  if (options.hash) {\n    url += options.hash;\n  } // Should url be wrapped?\n  // See https://drafts.csswg.org/css-values-3/#urls\n\n\n  if (/[\"'() \\t\\n]|(%20)/.test(url) || options.needQuotes) {\n    return \"\\\"\".concat(url.replace(/\"/g, '\\\\\"').replace(/\\n/g, \"\\\\n\"), \"\\\"\");\n  }\n\n  return url;\n};\n\n//# sourceURL=webpack://to-do-list/./node_modules/css-loader/dist/runtime/getUrl.js?");
 
 /***/ }),
 
@@ -145,7 +125,107 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"LeaderBoard\": () => (/* binding */ LeaderBoard),\n/* harmony export */   \"URL\": () => (/* binding */ URL),\n/* harmony export */   \"name\": () => (/* binding */ name),\n/* harmony export */   \"score\": () => (/* binding */ score)\n/* harmony export */ });\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_AddScore_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../modules/AddScore.js */ \"./modules/AddScore.js\");\n/* harmony import */ var _modules_getScore_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../modules/getScore.js */ \"./modules/getScore.js\");\n\n\n\n\nconst form = document.querySelector('#form');\nconst name = document.querySelector('#name');\nconst score = document.querySelector('#score');\nconst LeaderBoard = document.querySelector('#leaderboard');\nconst RefreshBtn = document.querySelector('#refresh');\nconst URL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/fLLGhFOYzdFIIisID8YZ/scores/';\n\n(0,_modules_getScore_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n\nRefreshBtn.addEventListener('click', () => {\n  LeaderBoard.innerHTML = '';\n  (0,_modules_getScore_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n});\n\nform.addEventListener('submit', (event) => {\n  event.preventDefault();\n  (0,_modules_AddScore_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n  form.reset();\n});\n\n\n\n\n//# sourceURL=webpack://to-do-list/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"LeaderBoard\": () => (/* binding */ LeaderBoard),\n/* harmony export */   \"URL\": () => (/* binding */ URL),\n/* harmony export */   \"name\": () => (/* binding */ name),\n/* harmony export */   \"score\": () => (/* binding */ score)\n/* harmony export */ });\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_AddScore_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/AddScore.js */ \"./src/modules/AddScore.js\");\n/* harmony import */ var _modules_getScore_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/getScore.js */ \"./src/modules/getScore.js\");\n/* harmony import */ var _modules_background_canvas_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/background-canvas.js */ \"./src/modules/background-canvas.js\");\n\n\n\n\n\nconst form = document.querySelector('#form');\nconst name = document.querySelector('#name');\nconst score = document.querySelector('#score');\nconst LeaderBoard = document.querySelector('#leaderboard');\nconst RefreshBtn = document.querySelector('#refresh');\nconst URL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/fLLGhFOYzdFIIisID8YZ/scores/';\n\n(0,_modules_getScore_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n(0,_modules_background_canvas_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\nRefreshBtn.addEventListener('click', () => {\n  LeaderBoard.innerHTML = '';\n  (0,_modules_getScore_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n});\n\nform.addEventListener('submit', (event) => {\n  event.preventDefault();\n  (0,_modules_AddScore_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n  form.reset();\n});\n\n\n\n\n//# sourceURL=webpack://to-do-list/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/modules/AddScore.js":
+/*!*********************************!*\
+  !*** ./src/modules/AddScore.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst name = document.querySelector('#name');\nconst score = document.querySelector('#score');\nconst URL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/fLLGhFOYzdFIIisID8YZ/scores/';\n\nconst AddScore = () => {\n  fetch(URL, {\n    method: 'POST',\n    headers: { 'Content-type': 'application/json; charset=UTF-8' },\n    body: JSON.stringify({\n      user: name.value,\n      score: score.value,\n    }),\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AddScore);\n\n\n//# sourceURL=webpack://to-do-list/./src/modules/AddScore.js?");
+
+/***/ }),
+
+/***/ "./src/modules/background-canvas.js":
+/*!******************************************!*\
+  !*** ./src/modules/background-canvas.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst canvas = document.querySelector('.matrix');\ncanvas.width = window.innerWidth;\ncanvas.height = window.innerHeight;\nconst ctx = canvas.getContext('2d');\nlet cols = Math.floor(window.innerWidth / 20) + 1;\nlet ypos = Array(cols).fill(0);\n\nctx.fillStyle = '#000';\nctx.fillRect(0, 0, canvas.width, canvas.height);\n\nfunction matrix() {\n  const w = window.innerWidth;\n  const h = window.innerHeight;\n\n  if (canvas.width !== w) {\n    canvas.width = w;\n    cols = Math.floor(window.innerWidth / 20) + 1;\n    ypos = Array(cols).fill(0);\n  }\n  if (canvas.height !== h) {\n    canvas.height = h;\n  }\n\n  ctx.fillStyle = '#0001';\n  ctx.fillRect(0, 0, w, h);\n\n  ctx.fillStyle = '#0f0';\n  ctx.font = '15pt monospace';\n\n  ypos.forEach((y, ind) => {\n    const text = String.fromCharCode(Math.random() * 128);\n    const x = ind * 20;\n    ctx.fillText(text, x, y);\n    if (y > 100 + Math.random() * 10000) ypos[ind] = 0;\n    else ypos[ind] = y + 20;\n  });\n}\n\nsetInterval(matrix, 50);\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (matrix);\n\n\n//# sourceURL=webpack://to-do-list/./src/modules/background-canvas.js?");
+
+/***/ }),
+
+/***/ "./src/modules/dynamichtml.js":
+/*!************************************!*\
+  !*** ./src/modules/dynamichtml.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst DynamicHtml = (text) => {\n  text.forEach((element) => {\n    const LeaderBoard = document.querySelector('#leaderboard');\n    const li = document.createElement('tr');\n    li.classList.add('scores');\n    li.innerHTML = `\n    <td>${element.user}</td>\n    <td>${element.score}</td>`;\n    LeaderBoard.appendChild(li);\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DynamicHtml);\n\n\n//# sourceURL=webpack://to-do-list/./src/modules/dynamichtml.js?");
+
+/***/ }),
+
+/***/ "./src/modules/getScore.js":
+/*!*********************************!*\
+  !*** ./src/modules/getScore.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _dynamichtml_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dynamichtml.js */ \"./src/modules/dynamichtml.js\");\n\n\nconst URL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/fLLGhFOYzdFIIisID8YZ/scores/';\n\nconst getScore = () => {\n  fetch(URL)\n    .then(async (response) => {\n      const data = await response.json();\n      const DataArray = data.result;\n      return DataArray;\n    })\n    .then((DataArray) => {\n      (0,_dynamichtml_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(DataArray);\n    });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getScore);\n\n\n//# sourceURL=webpack://to-do-list/./src/modules/getScore.js?");
+
+/***/ }),
+
+/***/ "./src/fonts/PAC-FONT.TTF":
+/*!********************************!*\
+  !*** ./src/fonts/PAC-FONT.TTF ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"00d715146e777174376c.TTF\";\n\n//# sourceURL=webpack://to-do-list/./src/fonts/PAC-FONT.TTF?");
+
+/***/ }),
+
+/***/ "./src/fonts/Ugly Byte Free Trial.ttf":
+/*!********************************************!*\
+  !*** ./src/fonts/Ugly Byte Free Trial.ttf ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"c16f99bb6f300a8760ca.ttf\";\n\n//# sourceURL=webpack://to-do-list/./src/fonts/Ugly_Byte_Free_Trial.ttf?");
+
+/***/ }),
+
+/***/ "./src/fonts/galacticagrid.regular.ttf":
+/*!*********************************************!*\
+  !*** ./src/fonts/galacticagrid.regular.ttf ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"25d248638503309f03f5.ttf\";\n\n//# sourceURL=webpack://to-do-list/./src/fonts/galacticagrid.regular.ttf?");
+
+/***/ }),
+
+/***/ "./src/fonts/game-music-love.regular.ttf":
+/*!***********************************************!*\
+  !*** ./src/fonts/game-music-love.regular.ttf ***!
+  \***********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"bd7b4b0b711d06598fc7.ttf\";\n\n//# sourceURL=webpack://to-do-list/./src/fonts/game-music-love.regular.ttf?");
+
+/***/ }),
+
+/***/ "./src/fonts/kongtext.ttf":
+/*!********************************!*\
+  !*** ./src/fonts/kongtext.ttf ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"a27eec77292c75f788cc.ttf\";\n\n//# sourceURL=webpack://to-do-list/./src/fonts/kongtext.ttf?");
+
+/***/ }),
+
+/***/ "./src/fonts/zerovelo.ttf":
+/*!********************************!*\
+  !*** ./src/fonts/zerovelo.ttf ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"c92f4462b035d1b50acf.ttf\";\n\n//# sourceURL=webpack://to-do-list/./src/fonts/zerovelo.ttf?");
 
 /***/ })
 

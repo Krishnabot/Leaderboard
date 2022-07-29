@@ -1,9 +1,11 @@
 const DynamicHtml = (text) => {
-  text.forEach((element, index) => {
+  text.forEach((element) => {
     const LeaderBoard = document.querySelector('#leaderboard');
-    const li = document.createElement('li');
+    const li = document.createElement('tr');
     li.classList.add('scores');
-    li.textContent = `${index + 1}. ${element.user}:${element.score}`;
+    li.innerHTML = `
+    <td>${element.user}</td>
+    <td>${element.score}</td>`;
     LeaderBoard.appendChild(li);
   });
 };

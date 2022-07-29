@@ -6,22 +6,28 @@
     <title>leaderboard </title>
 </head>
 <body>
-<h1>Leader Board</h1>
+<canvas class="matrix"></canvas>
+    <h1>Leader Board</h1>
+
 <div class="score-wrap">
 <section class="scores-card">
-    <div class="score-heading">
-        <p>Recent Scores</p>
-        <button type="button" id="refresh">Refresh</button>
+    <div class="score-heading pgradient">
+        <div><p>Recent Scores</p></div>
+        <button type="button" class="btn" id="refresh">Refresh</button>
     </div>
-    <ul id ="leaderboard"></ul>
+    <table id = "leaderboard">
+    </table>
 </section>
 <section class="add-score">
-     <p>Add your score</p>
+    <div class="pgradient"><p>Add Your Scores</p></div>
      <form action="/" method="post" id="form" >
       <input type="text" name="name" id="name" required placeholder="Your name">
       <input type="number" name="score" id="score" required placeholder="Your score">
-      <input type="submit" id= "submit" value="Submit">
-    </form></section>
+      <input type="submit" id= "submit" class="btn" value="Submit">
+    </form>
+<div class="logo-gif">
+    <img src="https://c.tenor.com/RHTRJRSjxikAAAAC/codex-codexyt.gif" alt="Gamers Launge gif"></div>
+</section>
 </div>
 </body>
 </html>
