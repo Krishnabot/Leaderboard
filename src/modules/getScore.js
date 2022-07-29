@@ -1,6 +1,7 @@
-import DynamicHtml from './dynamichtml.js';
+import DynamicHtml from "./dynamichtml.js";
 
-const URL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/fLLGhFOYzdFIIisID8YZ/scores/';
+const URL =
+  "https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/fLLGhFOYzdFIIisID8YZ/scores/";
 
 const getScore = () => {
   fetch(URL)

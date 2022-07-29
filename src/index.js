@@ -1,6 +1,6 @@
 import './style.css';
-import AddScore from '../modules/AddScore.js';
-import getScore from '../modules/getScore.js';
+import AddScore from "./modules/AddScore.js";
+import getScore from "./modules/getScore.js";
 
 const form = document.querySelector('#form');
 const name = document.querySelector('#name');
