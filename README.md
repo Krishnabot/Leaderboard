@@ -51,9 +51,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
--Used custom fonts from  [1001 Fonts](https://www.1001fonts.com/retro+video-game-fonts.html?page=1)
+- Used custom fonts from  [1001 Fonts](https://www.1001fonts.com/retro+video-game-fonts.html?page=1)
 - Generated Css gradient from [www.cssgradient.io](https://cssgradient.io/)
--
 - Logo gif Used from [www.tenor.com/](https://tenor.com/)
 - BackGround Inspired from [The Matrix Triology](https://en.wikipedia.org/wiki/The_Matrix_(franchise))
 
