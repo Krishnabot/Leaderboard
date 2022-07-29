@@ -2,6 +2,9 @@
 
 @font-face { font-family: ZeroVelFont; src: url('./fonts/zerovelo.ttf'); }
 @font-face { font-family: KongFont; src: url('./fonts/kongtext.ttf'); }
+@font-face { font-family: GalacticGrid; src: url('./fonts/galacticagrid.regular.ttf'); }
+@font-face { font-family: UglyByte; src: url('./fonts/Ugly\ Byte\ Free\ Trial.ttf'); }
+
 
 
 * {
@@ -49,70 +52,74 @@ p {
 padding: 1px;
 width: 200px;
 height: 30px;
-display: flex;
-justify-content: center;
-align-items: center;
-}
-.blue { color: #185875; }
-.yellow { color: #FFF842; }
+margin-bottom: 5px;
 
-.table-container th {
+}
+
+table {
+	  text-align: left;
+	  overflow: hidden;
+	  width: 100%;
+	  margin: 10px auto;
+    display: table;
+    padding: 0 0 8em 0;
+}
+
+th {
 	  font-weight: bold;
-	  font-size: 1em;
+      font-family: galacticGrid, sans-serif;
+
+	  font-size: 2em;
   text-align: left;
   color: #185875;
 }
 
-.table-container td {
+td {
 	font-weight: normal;
-	  font-size: 1em;
+  font-family: UglyByte, sans-serif;
+  color: #a7a1ae;
+
+	  font-size: 25px;
   -webkit-box-shadow: 0 2px 2px -2px #0E1119;
 	   -moz-box-shadow: 0 2px 2px -2px #0E1119;
 	        box-shadow: 0 2px 2px -2px #0E1119;
 }
 
-.table-container {
-	  text-align: left;
-	  overflow: hidden;
-	  width: 80%;
-	  margin: 0 auto;
-  display: table;
-  padding: 0 0 8em 0;
-}
 
-.table-container td, .table-container th {
-	  padding-bottom: 2%;
-	  padding-top: 2%;
+
+td,
+th {
+	padding-bottom: 2%;
+	padding-top: 2%;
   padding-left:2%;  
+  
 }
 
-.table-container tr:nth-child(odd) {
+tr:nth-child(odd) {
 	  background-color: #323C50;
 }
 
-.table-container tr:nth-child(even) {
+tr:nth-child(even) {
 	  background-color: #2C3446;
 }
 
-.table-container th {
+th {
 	  background-color: #1F2739;
 }
 
-.table-container td:first-child { color: #FB667A; }
-
-.table-container tr:hover {
+tr:hover {
    background-color: #464A52;
 -webkit-box-shadow: 0 6px 6px -6px #0E1119;
 	   -moz-box-shadow: 0 6px 6px -6px #0E1119;
 	        box-shadow: 0 6px 6px -6px #0E1119;
 }
 
-.table-container td:hover {
-  background-color: #FFF842;
-  color: #403E10;
+td:hover {
+  background-color: #5c85ff;
+  color: #ffffff;
   font-weight: bold;
   
-  box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
+  box-shadow: #938f1d -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
   transform: translate3d(6px, -6px, 0);
   
   transition-delay: 0s;
@@ -153,15 +160,9 @@ input {
   );
   border: none;
   border-radius: 100px;
-  box-shadow: inset 0 3px 15px 0 rgba(174, 32, 0, 1),
-    inset 0 -3px 0 0 rgba(254, 210, 98, 1),
-    inset 0 40px 0 0 rgba(254, 210, 98, 0.4),
-    inset 0 20px 20px 0 rgba(248, 191, 69, 1),
-    0 0 0 8px #000, 
-    0 9px 0 0 #444,
-    0 0 20px 0 rgba(254, 210, 98, 0.4),
-    0 40px 20px -30px rgba(254, 210, 98, 0.2);
-
+box-shadow: 1px 2px 38px 4px rgba(176,26,26,0.75);
+-webkit-box-shadow: 1px 2px 38px 4px rgba(176,26,26,0.75);
+-moz-box-shadow: 1px 2px 38px 4px rgba(176,26,26,0.75);
   &:before {
     content: "";
     position: absolute;

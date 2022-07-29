@@ -3,7 +3,7 @@ const DynamicHtml = (text) => {
     const LeaderBoard = document.querySelector('#leaderboard');
     const li = document.createElement("tr");
     li.classList.add('scores');
-    li.innerHTML = `<td>${index + 1}</td>
+    li.innerHTML = `
     <td>${element.user}</td>
     <td>${element.score}</td>`;
     LeaderBoard.appendChild(li);
