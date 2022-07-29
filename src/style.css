@@ -5,8 +5,6 @@
 @font-face { font-family: GalacticGrid; src: url('./fonts/galacticagrid.regular.ttf'); }
 @font-face { font-family: UglyByte; src: url('./fonts/Ugly\ Byte\ Free\ Trial.ttf'); }
 
-
-
 * {
   margin: 0;
   padding: 0;
@@ -15,15 +13,23 @@
 
 body {
   padding: 3rem;
-  background: rgb(238,174,202);
-  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  margin: 0;
+  background-color: #000;  
+}
+.matrix{
+position: fixed;
+  top: 0;
+  left: 0;
 }
 
 h1 {
   text-align: left;
   font-family: KongFont, sans-serif;
   font-size: 4rem;
-  padding: 3rem;
+  padding: 1rem;
+  color: rgb(0, 236, 35);
+  position: relative;
+  z-index: 100;
 }
 
 p {
@@ -35,6 +41,9 @@ p {
   display: flex;
   gap: 5rem;
   justify-content: space-around;
+  padding: 1rem;
+  position: relative;
+  z-index: 100;
 }
 
 .scores-card {
@@ -129,23 +138,29 @@ td:hover {
 }
 
 
-
+.pgradient{
+background: rgb(252,176,69);
+background: linear-gradient(90deg, rgba(252,176,69,1) 0%, rgba(253,29,29,1) 36%, rgba(131,58,180,1) 95%);padding: 20px;
+}
 
 
 #form {
   display: flex;
   flex-direction: column;
-  margin-top: 10px;
-  gap: 8px;
-  width: 300px;
+  margin: 20px auto;
+  gap: 20px;
 }
 
+#name, #score{
+  padding:20px;
+}
 input {
   padding: 5px;
 }
 
 .btn {
-  margin-top: 10px;
+  margin: 10px 0 auto auto  ;
+  width: 50%;
   position: relative;
   font-size: 1rem;
   font-family: ZeroVelFont, sans-serif;
